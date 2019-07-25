@@ -24,7 +24,7 @@ router.get('/:Id', function (req, res, next) {
 });
 
 
-router.put('/:Id', function (req, res, next) {
+router.post('/updatepassword/:Id', function (req, res, next) {
     api.findOneAndUpdate({ Phone_No: req.params.Id },
         { $set: { password: req.body.password } },
         { new: true }, function (err, post) {
@@ -95,7 +95,7 @@ router.get('/emergency/:Id', function (req, res, next) {
 });
 
 
-router.put('/emergency/:Id', function (req, res, next) {
+router.post('/updateemergency/:Id', function (req, res, next) {
     emergencyapi.findOneAndUpdate({ Phone_No: req.params.Id },
         { $set: { emergency_no: req.body.emergency_no } },
         { new: true }, function (err, post) {
