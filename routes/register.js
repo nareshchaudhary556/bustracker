@@ -35,7 +35,7 @@ router.post('/updatepassword/:Id', function (req, res, next) {
 });
 
 
-router.delete('/:Id', function (req, res, next) {
+router.post('/deleteAccount/:Id', function (req, res, next) {
     api.findOneAndRemove({ Phone_No: req.params.Id }, function (err, post) {
         if (err) return next(err);
         res.json(post);
