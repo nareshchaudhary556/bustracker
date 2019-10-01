@@ -13,7 +13,7 @@ var app = express();
 
 mongoose.Promise = global.Promise;
 //mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/busTrackerDB", { useNewUrlParser: true })
-mongoose.connect(process.env.MONGODB_URI || "mongodb://bustracker:bustracker1@ds355357.mlab.com:55357/bustrackerdb", { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI || "mongodb://bustracker:bustracker1@ds229078.mlab.com:29078/bustrackerdb", { useNewUrlParser: true })
   .then(() => console.log('connection succesful'))
   .catch((err) => console.error(err));
 mongoose.set('autoIndex', false);
